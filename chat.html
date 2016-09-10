@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>User Profile</title>
+
+        <link rel="stylesheet" href="/Content/bootstrap/bootstrap.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="/Content/animate/animate.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/Content/Custom/navbar.css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <style>
+.col-panel-fix {
+    padding-left: 0;
+    padding: 0;
+    padding-top: 0;
+    top: 67px;
+}
+
+.panel-body2 {
+    padding: 7px;
+}
+
+.chat-nav-color {
+    color: #0c7cd5;
+}
+
+.scrollable-chat {
+    position: fixed;
+    font-size: 17px;
+    overflow-y: scroll;
+    top: 105px;
+    bottom: 30px;
+    padding: 0;
+}
+
+.scrollable-chat::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.4);
+    border-color: black;
+}
+
+.scrollable-chat::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+.scrollable-chat::-webkit-scrollbar-thumb
+{
+    background-color: #0ae;
+
+    background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                       color-stop(.5, rgba(255, 255, 255, .2)),
+                       color-stop(.5, transparent), to(transparent));
+}
+
+.messagebox {
+    border: 1px solid #b0b0b0 !important;
+    font-family:Arial, FontAwesome;
+}
+    </style>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">flatmates</a>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img alt="User Image" width="25" src="/Content/img/people-img6.jpg" class="img-responsive img-rounded img-circle pull-left" id="userimg"></img>&nbsp;&nbsp;
+                                <span class="pull-right" id="username">User Name &nbsp;<b class="caret"></b></span>
+                            </a>
+                            <ul class="dropdown-menu animated flipInX">
+                                <li><a href="#"><i class="fa fa-fw fa-bar-chart" aria-hidden="true"></i>&nbsp;&nbsp;Activity</a></li>
+                                <li><a href="#"><i class="fa fa-fw fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Profile</a></li>
+                                <li><a href="#"><i class="fa fa-fw fa-cogs" aria-hidden="true"></i>&nbsp;&nbsp;Settings</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><i class="fa fa-fw fa-commenting" aria-hidden="true"></i>&nbsp;&nbsp;Unread</a></li>
+                                <li><a href="#"><i class="fa fa-fw fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Active Friends</a></li>
+                                <li><a href="#"><i class="fa fa-fw fa-fire" aria-hidden="true"></i>&nbsp;&nbsp;New Matches</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <div class="container-fluid max-height no-overflow">
+            <div class="row">
+                <div class="col-md-3  scrollable">
+                    <div class="container-fluid">
+                        <div class="input-group">
+                            <input type="search" name="search" placeholder="&#xF002;"  id="inputSearch" class="form-control search-icon" value="" required="required" title="">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-primary search-btn-fix">Create</button>
+                        </div>
+                    </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="pull-right"><b>16:30</b></span>
+                                <span class="badge pull-right">5</span>
+                            </div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="fa fa-3x fa-star pull-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="pull-right"><b>5:30</b></span>
+                                <i class="fa fa-star animated infinite tada pull-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="pull-right">22Nov</span>
+                                <i class="fa fa-hand-peace-o animated infinite tada pull-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">stars</div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">stars</div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">stars</div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">stars</div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">stars</div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">stars</div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">stars</div>
+                        </div>
+                        <div class="row row-fix">
+                            <div class="col-md-3">
+                                <div class="user">
+                                    <div class="avatar">
+                                    <img class="img-responsive img-responsive-fix img-rounded" src="/Content/img/profile-img3.jpg" alt="User name">
+                                    <div class="status off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="name">User name</div>
+                                <div class="mood">User mood</div>
+                            </div>
+                            <div class="col-md-3">stars</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div> <!-- because of fixed col -->
+                  <div class="col-md-9 col-panel-fix">
+                      <div class="panel panel-default">
+                          <div class="panel-body2 panel-body chat-nav-color">
+                           <span class="pull-left">Members : 6</span>
+                          <ul class="nav nav-pills pull-right" role="tablist">
+                            <a href="#">Edit</a>&nbsp;
+                            <a href="#">Settings</a>&nbsp;
+                          </ul>
+                          </div>
+                      </div>
+                  <!-- CHat Content -->
+                  <div class="col-sm-9 col-xs-12 chat scrollable-chat" tabindex="5001">
+                    <div class="col-inside-lg decor-default">
+                      <div class="chat-body">
+                        <h6>Mini Chat</h6>
+                        <div class="">
+                          <div class="panel panel-default col-md-4">
+                            <div class="panel-body">
+                              <div class="avatar">
+                                <img class="img-circle img-responsive" width="40" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="User name">
+                                <div class="time">5 min ago</div>
+                                <div class="status online"></div>
+                              </div>
+                              <div class="name">Alexander Herthic</div>
+                              Basic panel example
+                            </div>
+                          </div>
+                        </div><br>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- chat area complete -->
+                  <div class="input-group navbar-fixed-bottom col-md-offset-3 messagebox">
+                      <textarea class="form-control custom-control animated fadeIn" rows="1" placeholder="&nbsp;&#xf093; Type a message..."></textarea>
+                      <span class="input-group-addon btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Send </span>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="//code.jquery.com/jquery.js"></script>
+        <script src="https://raw.githubusercontent.com/leafo/sticky-kit/master/dist/sticky-kit.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    </body>
+</html>

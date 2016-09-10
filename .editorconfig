@@ -1,0 +1,64 @@
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Use 2 spaces for indentation in HTML, JavaScript, Ruby, SCSS, and XML
+
+[*.{html,js,rb,scss,xml}]
+indent_size = 2
+
+[Gemfile*]
+indent_size = 2
+
+[*.{js,py}]
+charset = utf-8
+
+[Rakefile]
+indent_size = 2
+
+[*.php]
+indent_style = space
+indent_size = 4
+
+
+# Use 4 spaces for indentation in Markdown files
+
+[*.md]
+indent_size = 4
+
+
+# Unix-style newlines with a newline ending every file
+
+# 4 space indentation
+[*.{py,rst,txt}]
+indent_style = space
+trim_trailing_whitespace = true
+indent_size = 4
+end_of_line = LF
+
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
+
+# Indentation override for all JS under lib directory
+[lib/**.js]
+indent_style = space
+indent_size = 2
+
+# Matches the exact files either package.json or .travis.yml
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
+
+
+[*.yml]
+indent_style = space
+indent_size = 2
+end_of_line = LF
